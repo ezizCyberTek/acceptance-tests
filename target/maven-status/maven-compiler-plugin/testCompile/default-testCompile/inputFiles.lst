@@ -1,0 +1,12 @@
+/Users/ezizkurbanov/Documents/workspace2019/acceptance-tests/src/test/java/com/prestashop/pages/HomePage.java
+/Users/ezizkurbanov/Documents/workspace2019/acceptance-tests/src/test/java/com/prestashop/utilities/ConfigurationReader.java
+/Users/ezizkurbanov/Documents/workspace2019/acceptance-tests/src/test/java/com/prestashop/runners/CukesRunner.java
+/Users/ezizkurbanov/Documents/workspace2019/acceptance-tests/src/test/java/com/prestashop/utilities/BrowserUtils.java
+/Users/ezizkurbanov/Documents/workspace2019/acceptance-tests/src/test/java/com/prestashop/step_definitions/Hooks.java
+/Users/ezizkurbanov/Documents/workspace2019/acceptance-tests/src/test/java/com/prestashop/step_definitions/ProductInformationStepDefs.java
+/Users/ezizkurbanov/Documents/workspace2019/acceptance-tests/src/test/java/com/prestashop/step_definitions/HomePageStepDefs.java
+/Users/ezizkurbanov/Documents/workspace2019/acceptance-tests/src/test/java/com/prestashop/pages/MyAccountPage.java
+/Users/ezizkurbanov/Documents/workspace2019/acceptance-tests/src/test/java/com/prestashop/step_definitions/LoginStepDefinitions.java
+/Users/ezizkurbanov/Documents/workspace2019/acceptance-tests/src/test/java/com/prestashop/utilities/Driver.java
+/Users/ezizkurbanov/Documents/workspace2019/acceptance-tests/src/test/java/com/prestashop/pages/ItemPage.java
+/Users/ezizkurbanov/Documents/workspace2019/acceptance-tests/src/test/java/com/prestashop/pages/SigninPage.java

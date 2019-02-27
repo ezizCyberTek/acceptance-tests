@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber Reports (no 1) - Feature: login</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation" ><a href="overview-steps.html">Steps</a></li>
+                <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+    
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+              <th>Number</th>
+            <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>acceptance-tests</td>
+              <td>1</td>
+            <td>26 Feb 2019, 22:16</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+      </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Feature Report</h2>
+      </div>
+</div>
+
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table class="stats-table">
+
+        
+<thead>
+  <tr class="header dont-sort">
+        <th></th>
+    <th colspan="6">Steps</th>
+    <th colspan="3">Scenarios</th>
+    <th colspan="2">Features</th>
+  </tr>
+  <tr>
+    <th>Feature</th>
+        <th class="passed">Passed</th>
+    <th class="failed">Failed</th>
+    <th class="skipped">Skipped</th>
+    <th class="pending">Pending</th>
+    <th class="undefined">Undefined</th>
+    <th class="total">Total</th>
+
+    <th class="passed">Passed</th>
+    <th class="failed">Failed</th>
+    <th class="total">Total</th>
+
+    <th>Duration</th>
+    <th>Status</th>
+  </tr>
+</thead>
+
+
+        <tbody>
+        <tr>
+          <td class="tagname">login</td>
+                    <td      class="passed"    >5</td>
+          <td      class="failed"    >1</td>
+          <td >0</td>
+          <td >0</td>
+          <td >0</td>
+          <td class="total">6</td>
+
+          <td  class="passed"    >1</td>
+          <td  class="failed"    >1</td>
+          <td class="total">2</td>
+
+          <td class="duration" data-value="16244256463">16.244</td>
+          <td class="failed">Failed</td>
+        </tr>
+        </tbody>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-10">
+      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
+      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <div class="feature">
+        
+<div class="tags indention">
+      <b>Tags:</b>
+           <a href="report-tag_login.html">@login</a>
+      </div>
+
+        
+<div class="brief failed">
+  <span class="keyword indention">Feature</span>
+  <span class="name">login</span>
+  
+
+  </div>
+
+        <div class="description indention"></div>
+
+        <div class="elements inner-level">
+                      
+<div class="element">
+  
+  
+<div class="tags indention">
+      <b>Tags:</b>
+           <a href="report-tag_login.html">@login</a>
+           <a href="report-tag_smoke.html">@smoke</a>
+           <a href="report-tag_temp.html">@temp</a>
+      </div>
+
+  
+  <span class="lead-duration duration">3.368</span>
+
+
+    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
+    
+<div class="brief passed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">login link</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-1" class="collapse collapsable-details ">
+    
+  <div class="inner-level hooks-before">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-2">
+      
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+    </div>
+
+    <div id="before-2" class="inner-level collapse collapsable-details ">
+              <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">Before</span>
+                          <span class="location name">Hooks.setUp()</span>
+                        
+  <span class="lead-duration duration">6.011</span>
+
+          </div>
+
+                      
+
+          
+                    
+
+          
+  
+        </div>
+          </div>
+  </div>
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-3">
+    
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-3" class="inner-level collapse collapsable-details ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">the user is on the home page</span>
+  
+  <span class="lead-duration duration">1.421</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">the user clicks on Sign in link</span>
+  
+  <span class="lead-duration duration">1.885</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">username and password fields should be displayed</span>
+  
+  <span class="lead-duration duration">0.060</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+  <div class="inner-level hooks-after">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-4">
+      
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+    </div>
+
+    <div id="after-4" class="inner-level collapse collapsable-details ">
+              <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+                          <span class="location name">Hooks.tearDown(Scenario)</span>
+                        
+  <span class="lead-duration duration">0.099</span>
+
+          </div>
+
+                      
+
+          
+                    
+
+          
+  
+        </div>
+          </div>
+  </div>
+
+  </div>
+</div>
+
+                      
+<div class="element">
+  
+  
+<div class="tags indention">
+      <b>Tags:</b>
+           <a href="report-tag_login.html">@login</a>
+           <a href="report-tag_temp.html">@temp</a>
+      </div>
+
+  
+  <span class="lead-duration duration">12.875</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-5">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Verify user name and last name</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-5" class="collapse collapsable-details  in ">
+    
+  <div class="inner-level hooks-before">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-6">
+      
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+    </div>
+
+    <div id="before-6" class="inner-level collapse collapsable-details ">
+              <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">Before</span>
+                          <span class="location name">Hooks.setUp()</span>
+                        
+  <span class="lead-duration duration">3.047</span>
+
+          </div>
+
+                      
+
+          
+                    
+
+          
+  
+        </div>
+          </div>
+  </div>
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-7">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-7" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">the user is on the login page</span>
+  
+  <span class="lead-duration duration">1.378</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">I login using username &quot;aziz-8454@mail.ru&quot; and password &quot;passwords&quot;</span>
+  
+  <span class="lead-duration duration">1.450</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief failed">
+  <span class="keyword indention">Then</span>
+  <span class="name">user's full name &quot;name&quot; &quot;lastname&quot; should be displayed</span>
+  
+  <span class="lead-duration duration">10.046</span>
+
+  </div>
+
+        
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-8">
+          <a>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.account&gt;span&quot;}</a>
+      </div>
+      <div id="msg-8" class="collapse collapsable-details  in ">
+        <pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.account&gt;span&quot;}
+  (Session info: chrome=72.0.3626.119)
+  (Driver info: chromedriver=2.46.628411 (3324f4c8be9ff2f70a05a30ebc72ffb013e1a71e),platform=Mac OS X 10.14.3 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Ezizs-MacBook-Pro.local', ip: 'fe80:0:0:0:ca2:ceeb:4e5f:70a0%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.3', java.version: '1.8.0_201'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.46.628411 (3324f4c8be9ff2..., userDataDir: /var/folders/6t/6k9b5flx62s...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:51460}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 72.0.3626.119, webStorageEnabled: true}
+Session ID: 7bf054f94cc3308d07b511ad2cf29c57
+*** Element info: {Using=css selector, value=.account&gt;span}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:420)
+	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:431)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy16.getText(Unknown Source)
+	at com.prestashop.step_definitions.LoginStepDefinitions.user_s_full_name_should_be_displayed(LoginStepDefinitions.java:33)
+	at &#10045;.user's full name &quot;name&quot; &quot;lastname&quot; should be displayed(file:src/test/resources/com/prestashop/features/login.feature:13)
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+  <div class="inner-level hooks-after">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-9">
+      
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+    </div>
+
+    <div id="after-9" class="inner-level collapse collapsable-details ">
+              <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+                          <span class="location name">Hooks.tearDown(Scenario)</span>
+                        
+  <span class="lead-duration duration">0.741</span>
+
+          </div>
+
+                      
+
+          
+                    
+
+          
+    <div class="embeddings inner-level">
+                <div class="embedding indention">
+        <div data-toggle="collapse" data-target="#embedding-10" class="collapsable-control">
+      <a>Attachment 1 (png)</a>
+      <a href="embeddings/embedding_1474862907.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-10" class="collapse collapsable-details">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_1474862907.png">
+      </div>
+    </div>
+  </div>
+        </div>
+  
+        </div>
+          </div>
+  </div>
+
+  </div>
+</div>
+
+                  </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-10">
+      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
+      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    </div>
+  </div>
+</div>
+
+<br>
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
