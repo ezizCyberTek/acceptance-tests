@@ -22,7 +22,7 @@ Feature: Product Information
 		When the user selects "Printed Chiffon Dress"
 		Then product page title should contain "Printed Chiffon Dress"
 		And product name should be "Printed Chiffon Dress"
-	@temp	
+		
 	Scenario: Change item count
 		When the user selects "Printed Chiffon Dress"
 		Then correct default count size should be 1

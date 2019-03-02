@@ -12,9 +12,13 @@ public class MyAccountPage {
 		PageFactory.initElements(Driver.getDriver(), this);
 	}
 	
-	@FindBy(css=".account>span")
+	@FindBy(xpath = "//a[@title='View my customer account']")
 	public WebElement fullName;
 	
+	@FindBy(className = "logout")
+	public WebElement logOut;
 	
+	@FindBy(xpath="//a[@title='Information']")
+	public WebElement myPersonalInfo;
 	
 }

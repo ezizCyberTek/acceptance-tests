@@ -1,15 +1,15 @@
 @login
 Feature: login
 	
-	@smoke @temp
+	@smoke 
 	Scenario: login link
 		Given the user is on the home page
 		When the user clicks on Sign in link
 		Then username and password fields should be displayed
-	@temp	
+
 	Scenario: Verify user name and last name
 		Given the user is on the login page
-		When I login using username "aziz-8454@mail.ru" and password "passwords"
+		When I login using username "aziz-8454@mail.ru" and password "password"
 		Then user's full name "name" "lastname" should be displayed
 	
 	@amazon_check

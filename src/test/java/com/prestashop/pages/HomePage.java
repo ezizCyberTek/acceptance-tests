@@ -19,6 +19,11 @@ public class HomePage {
 	@FindBy(className="login")
 	public WebElement signIn;
 	
+	/*
+	 * takes a name of the product, builds css based on the name and locates the new
+	 * product with new css and returns it
+	 * @param product name
+	 */
 	public WebElement item(String item) {
 		String css = "#center_column a.product-name[title='"+item+"']";
 		return Driver.getDriver().findElement(By.cssSelector(css));

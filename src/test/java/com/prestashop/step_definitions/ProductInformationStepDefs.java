@@ -82,5 +82,11 @@ public class ProductInformationStepDefs {
 		assertEquals("1", itemPage.itemCount.getAttribute("value"));
 		
 	}
+	
+	@Then("the price should be {string}")
+	public void the_price_should_be(String expectedPrice) {
+		String actualPrice = new ItemPage().itemPrice.getText();
+	    assertEquals(expectedPrice, actualPrice);
+	}
 
 }

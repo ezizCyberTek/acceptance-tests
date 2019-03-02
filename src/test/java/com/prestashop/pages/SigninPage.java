@@ -15,6 +15,12 @@ public class SigninPage {
 	@FindBy(id = "email_create")
 	public WebElement signupEmail;
 	
+	@FindBy(id = "SubmitCreate")
+	public WebElement createAccountButton;
+	
+	@FindBy(id = "create_account_error")
+	public WebElement invalidEmailMessage;
+	
 	@FindBy(id = "email")
 	public WebElement loginEmail;
 	

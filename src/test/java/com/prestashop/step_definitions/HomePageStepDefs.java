@@ -1,5 +1,6 @@
 package com.prestashop.step_definitions;
 
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import static org.junit.Assert.*;
 import com.prestashop.pages.HomePage;
@@ -61,5 +62,19 @@ public class HomePageStepDefs {
 	   assertTrue(signinPage.pasword.isDisplayed());
 	   
 	}
-	
+
+
+	@Then("the title and URL should be:")
+	public void the_title_and_URL_should_be(Map<String, String> map) {
+	    
+		String expectedTitle = map.get("Title");
+	    String actualTitle = Driver.getDriver().getTitle();
+	    assertEquals(expectedTitle, actualTitle);
+	    
+	    String expectedURL = map.get("Url");
+	    String actualURL = Driver.getDriver().getCurrentUrl();
+	    assertEquals(expectedURL, actualURL);
+	    
+	}
+
 }
