@@ -5,6 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
+import io.github.bonigarcia.wdm.PhantomJsDriverManager;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Driver {
@@ -26,6 +27,10 @@ public class Driver {
 				WebDriverManager.iedriver().setup();
 				driver = new InternetExplorerDriver();
 				break;
+//			case "phantomjs":
+//				WebDriverManager.phantomjs().setup();
+//				driver = new PhantomJsDriverManager();
+//				break;
 			}
 		}
 		return driver;

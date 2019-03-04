@@ -29,8 +29,17 @@ public class ItemPage {
 	@FindBy(css = "#product_condition>.editable")
 	public WebElement itemCondition;
 	
+	@FindBy(css = "#product_reference>.editable")
+	public WebElement itemModel;
+	
 	@FindBy(id = "our_price_display")
 	public WebElement itemPrice;
+	
+	@FindBy(xpath = "//tr[@class='even']/td[2]")
+	public WebElement itemStyle;
+	
+	@FindBy(xpath = "//a[@class='color_pick selected']")
+	public WebElement itemColor;
 	
 	//returns new select object
 	public Select size() {
