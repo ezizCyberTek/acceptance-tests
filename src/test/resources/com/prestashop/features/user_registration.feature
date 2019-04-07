@@ -17,3 +17,11 @@ Scenario: Custom user registration
 	|First Name | Last Name | Address | City | Company |
 	| whatever  | whatev    | 12 m st | town | CT      |
 	
+	
+@temptemp	
+Scenario: Custom user registration test
+	Given the user is on the login page as "warehouseAdminUser"
+	And the user enters a random email
+	And the user enters personal info
+	|First Name | Last Name | Address | City | Company | warehouseAdminUser |
+	| whatever  | whatev    | 12 m st | town | CT      |	warehouseAdmin  |

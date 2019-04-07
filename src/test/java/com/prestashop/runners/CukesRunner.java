@@ -12,10 +12,10 @@ import cucumber.api.junit.Cucumber;
 				  "json:target/cucumber.json"
 				},
 		
-		tags = "@temp",
+		tags = "@temptemp",
 		features="src/test/resources/com/prestashop/features",
 		glue="com/prestashop/step_definitions",
-		dryRun=false
+		dryRun=true
 		)
 public class CukesRunner {
 	
